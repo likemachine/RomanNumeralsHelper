@@ -9,24 +9,30 @@ struct NumLib {
 
 class RomanHelper{
   public:
-    NumLib num1 = {"I", 1};
-    NumLib num2 = {"V", 5};
-    NumLib num3 = {"X", 10};
-    NumLib num4 = {"L", 50};
-    NumLib num5 = {"C", 100};
-    NumLib num6 = {"D", 500};
-    NumLib num7 = {"M", 1000};
-  
-    std::vector<NumLib> nums = {num1, num2, num3, num4, num5, num6, num7};
-    std::string answer;  
+    static constexpr int l = 7;
+    NumLib num[l] {
+      {"I", 1},
+      {"V", 5},
+      {"X", 10},
+      {"L", 50},
+      {"C", 100},
+      {"D", 500},
+      {"M", 1000}
+    };
+
+    //std::vector<NumLib> nums = {num1, num2, num3, num4, num5, num6, num7}; 
   
     std::string to_roman(unsigned int n){
-      for (auto &num : nums) {
-       std::cout << "Roman: " << num.roman << " Arabic: " << num.arab << std::endl;
-        if (n / num.arab == 1)
-          return num.roman;
+      std::string answer = ""; 
+
+      for (int i = l - 1; i >= 0; i--) {
+      std::cout << "Roman: " << num[i].roman << " Arabic: " << num[i].arab << std::endl;
+        while (n >= num[i].arab){
+          n -= num[i].arab;
+          answer += num[i].roman;
+        }
       }
-      std::cout << n << std::endl;
+      std::cout << answer << std::endl;
       return answer;
     }
     // int from_roman(std::string rn){
