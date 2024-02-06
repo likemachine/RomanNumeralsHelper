@@ -23,16 +23,24 @@ class RomanHelper{
     //std::vector<NumLib> nums = {num1, num2, num3, num4, num5, num6, num7}; 
   
     std::string to_roman(unsigned int n){
-      std::string answer = ""; 
+      std::string answer = "";
+      int b = n;
 
       for (int i = l - 1; i >= 0; i--) {
-      std::cout << "Roman: " << num[i].roman << " Arabic: " << num[i].arab << std::endl;
-        while (n >= num[i].arab){
+        int flag = 0;
+
+      //std::cout << "Roman: " << num[i].roman << " Arabic: " << num[i].arab << std::endl;
+        while (n >= num[i].arab) {
           n -= num[i].arab;
           answer += num[i].roman;
+          flag++;
+          if (flag > 3) {
+            answer = answer.erase(1, 3);
+            answer += num[i + 1].roman;
+          }
         }
       }
-      std::cout << answer << std::endl;
+      std::cout << "answer is " << answer << std::endl;
       return answer;
     }
     // int from_roman(std::string rn){
