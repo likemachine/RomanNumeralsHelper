@@ -29,8 +29,16 @@ class RomanHelper{
       for (int i = l - 1; i >= 0; i--) {
         int flag = 0;
 
+        if (n == num[i+1].arab - num[i-1].arab){
+          n -= num[i+1].arab - num[i-1].arab;
+          answer += num[i-1].roman + num[i+1].roman;
+          std::cout << "answer now is " << answer << std::endl;
+        }
+
       //std::cout << "Roman: " << num[i].roman << " Arabic: " << num[i].arab << std::endl;
         while (n >= num[i].arab) {
+          //std::cout << "n is " << n << std::endl;
+          //std::cout << "num[i].arab is " << num[i].arab << std::endl;
           n -= num[i].arab;
           answer += num[i].roman;
           flag++;
