@@ -19,6 +19,18 @@ int main() {
     // Тест 4
     unsigned int rn4 = 9;
     assert(RomanNumerals.to_roman(rn4) == "IX");
+
+    // Тест 5
+    unsigned int rn5 = 1990;
+    assert(RomanNumerals.to_roman(rn5) == "MCMXC");
+
+    // Тест 6
+    unsigned int rn6 = 2008;
+    assert(RomanNumerals.to_roman(rn6) == "MMVIII");
+
+    // Тест 7
+    unsigned int rn7 = 3999;
+    assert(RomanNumerals.to_roman(rn7) == "MMMCMXCIX");
     
     std::cout << "All tests passed successfully." << std::endl;
 
