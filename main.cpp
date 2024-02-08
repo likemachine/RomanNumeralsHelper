@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <vector>
 
 struct NumLib {
   std::string roman;
@@ -37,9 +36,7 @@ class RomanHelper{
 
       for (int c = 3; c>= 0; c--) {
         for (int i = l - 1; i >= 0; i--) {
-          int flag = 0;
-
-          if (parts[c] == num[i+1].arab - num[i-1].arab){
+          if (parts[c] == num[i+1].arab - num[i-1].arab) {
             parts[c] -= num[i+1].arab - num[i-1].arab;
             answer += num[i-1].roman + num[i+1].roman;
           }
@@ -51,7 +48,6 @@ class RomanHelper{
             while (parts[c] >= num[i].arab) {
               parts[c] -= num[i].arab;
               answer += num[i].roman;
-              flag++;
             }
           }
         }        
@@ -61,7 +57,7 @@ class RomanHelper{
       return answer;
     }
 
-    // int from_roman(std::string rn){
-    //   return 0;
-    // }
+    int from_roman(std::string rn) {
+      return 0;
+    }
 } RomanNumerals;

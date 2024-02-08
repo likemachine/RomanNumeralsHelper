@@ -32,6 +32,24 @@ int main() {
     unsigned int n7 = 3999;
     assert(RomanNumerals.to_roman(n7) == "MMMCMXCIX");
     
+    //Тесты from_roman
+
+    //Тест 1
+    std::string rn1 = "I";
+    assert(RomanNumerals.from_roman(rn1) == 1);
+
+    //Тест 2
+    std::string rn2 = "XXI";
+    assert(RomanNumerals.from_roman(rn2) == 21);
+
+    //Тест 3
+    std::string rn3 = "IX";
+    assert(RomanNumerals.from_roman(rn3) == 9);
+
+    //Тест 4
+    std::string rn4 = "IV";
+    assert(RomanNumerals.from_roman(rn4) == 4);
+
     std::cout << "All tests passed successfully." << std::endl;
 
     return 0;
