@@ -13,24 +13,24 @@ int main() {
     assert(RomanNumerals.to_roman(n2) == "IV");
 
     // Тест 3
-    unsigned int rn3 = 1;
-    assert(RomanNumerals.to_roman(rn3) == "I");
+    unsigned int n3 = 1;
+    assert(RomanNumerals.to_roman(n3) == "I");
 
     // Тест 4
-    unsigned int rn4 = 9;
-    assert(RomanNumerals.to_roman(rn4) == "IX");
+    unsigned int n4 = 9;
+    assert(RomanNumerals.to_roman(n4) == "IX");
 
     // Тест 5
-    unsigned int rn5 = 1990;
-    assert(RomanNumerals.to_roman(rn5) == "MCMXC");
+    unsigned int n5 = 1990;
+    assert(RomanNumerals.to_roman(n5) == "MCMXC");
 
     // Тест 6
-    unsigned int rn6 = 2008;
-    assert(RomanNumerals.to_roman(rn6) == "MMVIII");
+    unsigned int n6 = 2008;
+    assert(RomanNumerals.to_roman(n6) == "MMVIII");
 
     // Тест 7
-    unsigned int rn7 = 3999;
-    assert(RomanNumerals.to_roman(rn7) == "MMMCMXCIX");
+    unsigned int n7 = 3999;
+    assert(RomanNumerals.to_roman(n7) == "MMMCMXCIX");
     
     std::cout << "All tests passed successfully." << std::endl;
 

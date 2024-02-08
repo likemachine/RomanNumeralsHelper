@@ -11,7 +11,7 @@ void splitNumber (int number, int parts[]) {
   int power = 1;
   for (int i = 0; i < 4; i++) {
     parts[i] = (number % 10) * power;
-    number /=10;
+    number /= 10;
     power *= 10;
   }
 }
