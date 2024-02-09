@@ -50,6 +50,18 @@ int main() {
     std::string rn4 = "IV";
     assert(RomanNumerals.from_roman(rn4) == 4);
 
+    //Тест 5
+    std::string rn5 = "MMVIII";
+    assert(RomanNumerals.from_roman(rn5) == 2008);
+
+    //Тест 6
+    std::string rn6 = "MDCLXVI";
+    assert(RomanNumerals.from_roman(rn6) == 1666);
+
+    //Тест 7
+    std::string rn7 = "MMMCMXCIX";
+    assert(RomanNumerals.from_roman(rn7) == 3999);
+
     std::cout << "All tests passed successfully." << std::endl;
 
     return 0;
