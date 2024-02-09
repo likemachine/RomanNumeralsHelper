@@ -52,16 +52,13 @@ class RomanHelper{
           }
         }        
       }
-
-      //std::cout << "answer is " << answer << std::endl;
       return answer;
     }
 
     int from_roman(std::string rn) {
-      for (int n = 0; n <= 3999; n++) {
+      for (int n = 1; n <= 3999; n++) {
         std::string answer2 = to_roman(n);
         if (answer2 == rn) {
-          std::cout << "answer is " << n << std::endl;
           return n;
         }
       }
