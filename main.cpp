@@ -36,7 +36,11 @@ class RomanHelper{
 
       for (int c = 3; c>= 0; c--) {
         for (int i = l - 1; i >= 0; i--) {
-          if (parts[c] == num[i+1].arab - num[i-1].arab) {
+          if (parts[c] == num[i].arab) {
+            parts[c] -= num[i].arab;
+            answer += num[i].roman;
+          }
+          else if (parts[c] == num[i+1].arab - num[i-1].arab) {
             parts[c] -= num[i+1].arab - num[i-1].arab;
             answer += num[i-1].roman + num[i+1].roman;
           }
