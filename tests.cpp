@@ -1,6 +1,6 @@
 #include <cassert>
 #include <iostream>
-#include "main.cpp"  // Замените на имя вашего заголовочного файла с кодом
+#include "main.cpp"
 
 int main() {
     
